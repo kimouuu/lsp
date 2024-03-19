@@ -19,29 +19,6 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
-        User::create([
-            'email' => 'admin@mail.com',
-            'password' => bcrypt('password'),
-            'level' => 'admin',
-        ]);
-
-        User::create([
-            'email' => 'pemilik@mail.com',
-            'password' => bcrypt('password'),
-            'level' => 'pemilik',
-        ]);
-
-        User::create([
-            'email' => 'operator@mail.com',
-            'password' => bcrypt('password'),
-            'level' => 'operator',
-        ]);
-
-        User::create([
-            'email' => 'mila@mail.com',
-            'password' => bcrypt('password'),
-            'level' => 'pelanggan',
-        ]);
+        $this->call(UserSeeder::class);
     }
 }
